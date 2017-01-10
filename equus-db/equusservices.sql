@@ -3,7 +3,7 @@ CREATE DATABASE 'equusservices';
 USE 'equusservices';
 
 CREATE TABLE stablenames(
-		businessID INT NOT NULL,
+		id INT NOT NULL,
 		stableName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
         contactName VARCHAR(50),
@@ -12,9 +12,10 @@ CREATE TABLE stablenames(
         streetAddress VARCHAR(150),
         city VARCHAR(100) NOT NULL,
         servicesOffered VARCHAR(200) NOT NULL
-	);
+        PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
+
     
-    INSERT INTO stablenames(BusinessID, StableName, PhoneNumber, ContactName, EmailContactAddress, WebsiteAddress, StreetAddress, ServicesOffered)
+    INSERT INTO stablenames(ID, StableName, PhoneNumber, ContactName, EmailContactAddress, WebsiteAddress, StreetAddress, ServicesOffered)
     VALUES 
 		(101, Blue Moon Stables, 919.943.8918, Cara Wolf, bluemoonstablesllc@gmail.com, http://www.bluemoonstables.biz, 1120 Whippoorwill Lane, Chapel Hill, Saddleseat Summer.camps) 
 		(102, Chapel Hill Equestrian, 919.724.4596, Brad, http://www.chapelhillequestrian.net/default.htm, http://www.chapelhillequestrian.net/default.net, 6614 Alexander Dr, Chapel Hill, Boarding Lessons Hunters Dressage Eventing)
@@ -23,7 +24,7 @@ CREATE TABLE stablenames(
         (105, Mane Event Stables, 919.391.8042, Kimberly Isley, http://maneeventstables.com/contact/, http://maneeventstables.com, 2545 Hwy 54 W, Chapel Hill, Boarding Lessons Summer.Camps Hunters Jumpers)
 
 CREATE TABLE tackApparel(
-		businessID INT NOT NULL,
+		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
         emailContact VARCHAR(100),
@@ -31,26 +32,26 @@ CREATE TABLE tackApparel(
         streetAddress VARCHAR(150) NOT NULL, 
         city VARCHAR(100) NOT NULL,
         productsOffered VARCHAR(200) NOT NULL,
-        );
+        PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
         
-	INSERT INTO tackApparel(BusinessID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
+	INSERT INTO tackApparel(ID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
         (201, The Bull Chute, 919.782.2613, , http://www.thebullchute.com, 6602 Glenwood Ave, Raleigh, Western apparel and footwear)  
         (202, Dover Saddlery, 919.596.4920, customerservice@doversaddlery.com, http://www.doversaddlery.com, 7920 Skyland Ridge Parkway, Raleigh, English-tack apparel footwear barn-supplies)
         (203, M & M Tack Shop, 919.851-0102, questions@mmtackshop.com, http://www.mmtackshop.com, 2721A Dover Farm Rd, Raleigh, English-tack apparel footwear)
         (204, Rocking B Saddle Shop, 919.732.7453, , http://www.facebook.com/pages/Rocking-B-Saddle-Shop/152433544798285, 1400 Ben Johnston Rd, Hillsborough, English-tack Western-tack)
 
 CREATE TABLE FeedSuppliesTrailers(
-		businessID INT NOT NULL,
+		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
         emailContact VARCHAR(100),
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
-        productsOffered VARCHAR(200)
-        );
+        productsOffered VARCHAR(200),
+        PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
 	
-    INSERT INTO FeedSuppliesTrailers (BusinessID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
+    INSERT INTO FeedSuppliesTrailers (ID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
 		(301, Country Farm & Home Supply, 919.542.3353, http://chathamfarmsupply.com/contact-us, http://chathamfarmsupply.com, 101 S Small St, Pittsboro, Feed Hay Horse-supplies Tack)
         (302, Gro-Smart, 919.245.7848, gro_smart@yahoo.com, http://www.grosmart.com, 250 S Churton St, Hillsborough, Feed Hay Supplies)
         (303, Piedmont Feed & Garden Supply, 919.942.7848, http://www.piedmontfeed.com/visit, http://www.piedmontfeed.com, 4805 NC Hwy 54 West, Chapel Hill, Feed Hay Bedding Supplies)
@@ -60,7 +61,7 @@ CREATE TABLE FeedSuppliesTrailers(
         (307, Southern Alamance Trailer Co, 336.376.6316,  ,  , 8372 Bethel Church Park Rd, Snow Camp, Trailers Sales Service)
 
 CREATE TABLE Veterinarians(
-		businessID INT NOT NULL,
+		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         vetName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
@@ -68,17 +69,17 @@ CREATE TABLE Veterinarians(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
-        servicesOffered VARCHAR(200)
-        );
+        servicesOffered VARCHAR(200),
+        PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
 	 
-     INSERT INTO Veterinarians (BusinessID, ShopName, VetName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
+     INSERT INTO Veterinarians (ID, ShopName, VetName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
 		(401, Flat River Veterinary Hospital, Dr-Lloyd-Heron Dr-John-Seal, 919.477.4210, http://www.flatriverveterinaryhospital.com/contact-us, http://www.flatriverveterinaryhospital.com, 
         325 Red Mountain Rd, Rougemont, Equine Health)
         (402, Iron Will Mobile Veterinary Services, Dr-John-Parks Dr-Chelsey-Miller, 336.223.8644, ironwillvets@gmail.com, http://www.ironwillvets.com/index.html, 2445 Vaughn Rd, Burlington, Equine & Large Animal Health)
         (403, Triangle Equine Mobile Veterinary Services, Dr Sally Vivrette, 919.460.6300, info@triangleequine.com, http://www.triangleequine.com, 103 Candy Apple Court, Cary, Equine health)
         
 CREATE TABLE Farriers(
-		businessID INT NOT NULL,
+		id INT NOT NULL,
         farrierName VARCHAR (100) NOT NULL,
         shopName VARCHAR(100),
         phoneNumber INT(15) NOT NULL,
@@ -86,10 +87,10 @@ CREATE TABLE Farriers(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
-        servicesOffered VARCHAR(200)
-        );
+        servicesOffered VARCHAR(200),
+        PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
         
-	INSERT INTO Farriers (BusinessID, FarrierName, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
+	INSERT INTO Farriers (ID, FarrierName, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
         (501, Craig Horvath, Craigs Farrier Service, 919-995-5651, craigsfarrierservice@gmail.com, http://www.craigsfarrierservice.com/,  , Raleigh, Shoeing Trims)
         (502, Matt Flood,  , 336.437.4559,  ,  ,   , Union Ridge, Shoeing Trims)
         (503, Geoff Morrison, Shod Steed LLC, 919.264.4735, http://www.shodsteed.com/contact-us, http://www.shodsteed.com, 770 Old Dam Rd, Liberty, Shoeing Trims)
