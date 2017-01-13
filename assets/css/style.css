@@ -1,13 +1,28 @@
+html {
+  position: relative;
+  min-height: 100%
+}
+header {
+	background-color: #ffcc00;
+	text-align: right;
+	width: 100%;
+	height: 50px;
+
+}
 body {
 	width: 100%;
 	font-family: 'Libre Franklin', sans-serif;
 	
 }
+
+h1 {
+	color: #ffcc00;
+}
 .jumbotron {
 	position: relative;
 	font-family: 'Poller One', cursive, serif;
 	text-align: center;
-	color: yellow;
+	color: #ffcc00;
 	background-color: #FFCC66;
 	/* add bootstrap jumbotron image */
 	background: url("../images/Horses_Running_Free_1434767.jpg");
@@ -16,4 +31,12 @@ body {
 	background-position: center;
 	/* more adjustments to bootstrap */
 	margin-bottom: 5px;
+}
+.footer {
+	background: #ffcc00;
+	color: black;
+	padding: 25px;
+	border-top: 8px solid #4aaaa5;
+	font-size: 12px;
+	text-align: center;
 }
