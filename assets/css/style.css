@@ -4,14 +4,16 @@ body {
 	
 }
 .jumbotron {
+	position: relative;
+	font-family: 'Poller One', cursive, serif;
 	text-align: center;
+	color: yellow;
+	background-color: #FFCC66;
 	/* add bootstrap jumbotron image */
 	background: url("../images/Horses_Running_Free_1434767.jpg");
 	/*background-size: cover;*/
 	background-repeat: repeat;
 	background-position: center;
 	/* more adjustments to bootstrap */
-	color: yellow;
-	background-color: #FFCC66;
 	margin-bottom: 5px;
 }
