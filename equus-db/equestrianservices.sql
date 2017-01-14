@@ -11,6 +11,7 @@ CREATE TABLE stablenames(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150),
         city VARCHAR(100) NOT NULL,
+        county VARCHAR(50) NOT NULL,
         servicesOffered VARCHAR(200) NOT NULL
         PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
 
@@ -31,6 +32,7 @@ CREATE TABLE tackApparel(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL, 
         city VARCHAR(100) NOT NULL,
+         county VARCHAR(50) NOT NULL,
         productsOffered VARCHAR(200) NOT NULL,
         PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
         
@@ -40,7 +42,7 @@ CREATE TABLE tackApparel(
         (203, M & M Tack Shop, 919.851-0102, questions@mmtackshop.com, http://www.mmtackshop.com, 2721A Dover Farm Rd, Raleigh, English-tack apparel footwear)
         (204, Rocking B Saddle Shop, 919.732.7453, , http://www.facebook.com/pages/Rocking-B-Saddle-Shop/152433544798285, 1400 Ben Johnston Rd, Hillsborough, English-tack Western-tack)
 
-CREATE TABLE FeedSuppliesTrailers(
+CREATE TABLE feedSuppliesTrailers(
 		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
@@ -48,10 +50,11 @@ CREATE TABLE FeedSuppliesTrailers(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
+		county VARCHAR(50) NOT NULL,
         productsOffered VARCHAR(200),
         PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
 	
-    INSERT INTO FeedSuppliesTrailers (ID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
+    INSERT INTO feedSuppliesTrailers (ID, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ProductsOffered)
 		(301, Country Farm & Home Supply, 919.542.3353, http://chathamfarmsupply.com/contact-us, http://chathamfarmsupply.com, 101 S Small St, Pittsboro, Feed Hay Horse-supplies Tack)
         (302, Gro-Smart, 919.245.7848, gro_smart@yahoo.com, http://www.grosmart.com, 250 S Churton St, Hillsborough, Feed Hay Supplies)
         (303, Piedmont Feed & Garden Supply, 919.942.7848, http://www.piedmontfeed.com/visit, http://www.piedmontfeed.com, 4805 NC Hwy 54 West, Chapel Hill, Feed Hay Bedding Supplies)
@@ -60,7 +63,7 @@ CREATE TABLE FeedSuppliesTrailers(
         (306, Double D Trailers, 888.244.2029, http://www.doubledtrailers.com/contact-us, http://www.doubledtrailers.com, , Pink Hill, Horse-Trailers Stock-Trailers Custom-Orders)
         (307, Southern Alamance Trailer Co, 336.376.6316,  ,  , 8372 Bethel Church Park Rd, Snow Camp, Trailers Sales Service)
 
-CREATE TABLE Veterinarians(
+CREATE TABLE veterinarians(
 		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         vetName VARCHAR(100) NOT NULL,
@@ -69,16 +72,17 @@ CREATE TABLE Veterinarians(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
+		county VARCHAR(50) NOT NULL,
         servicesOffered VARCHAR(200),
         PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
 	 
-     INSERT INTO Veterinarians (ID, ShopName, VetName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
+     INSERT INTO veterinarians (ID, ShopName, VetName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
 		(401, Flat River Veterinary Hospital, Dr-Lloyd-Heron Dr-John-Seal, 919.477.4210, http://www.flatriverveterinaryhospital.com/contact-us, http://www.flatriverveterinaryhospital.com, 
         325 Red Mountain Rd, Rougemont, Equine Health)
         (402, Iron Will Mobile Veterinary Services, Dr-John-Parks Dr-Chelsey-Miller, 336.223.8644, ironwillvets@gmail.com, http://www.ironwillvets.com/index.html, 2445 Vaughn Rd, Burlington, Equine & Large Animal Health)
         (403, Triangle Equine Mobile Veterinary Services, Dr Sally Vivrette, 919.460.6300, info@triangleequine.com, http://www.triangleequine.com, 103 Candy Apple Court, Cary, Equine health)
         
-CREATE TABLE Farriers(
+CREATE TABLE farriers(
 		id INT NOT NULL,
         farrierName VARCHAR (100) NOT NULL,
         shopName VARCHAR(100),
@@ -87,12 +91,30 @@ CREATE TABLE Farriers(
         websiteAddress VARCHAR(150),
         streetAddress VARCHAR(150) NOT NULL,
         city VARCHAR(100) NOT NULL,
+		county VARCHAR(50) NOT NULL,
         servicesOffered VARCHAR(200),
         PRIMARY KEY ( `id` ) ); /* Set ID as primary key */
         
-	INSERT INTO Farriers (ID, FarrierName, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
+	INSERT INTO farriers (ID, FarrierName, ShopName, PhoneNumber, EmailContact, WebsiteAddress, StreetAddress, City, ServicessOffered)
         (501, Craig Horvath, Craigs Farrier Service, 919-995-5651, craigsfarrierservice@gmail.com, http://www.craigsfarrierservice.com/,  , Raleigh, Shoeing Trims)
         (502, Matt Flood,  , 336.437.4559,  ,  ,   , Union Ridge, Shoeing Trims)
         (503, Geoff Morrison, Shod Steed LLC, 919.264.4735, http://www.shodsteed.com/contact-us, http://www.shodsteed.com, 770 Old Dam Rd, Liberty, Shoeing Trims)
         (504, Scott Strong,  , 336.608.9989,  ,   ,    ,    , Shoeing Trims)
-		
+
+CREATE TABLE trailers(
+		id INT NOT NULL,
+        storename VARCHAR (100) NOT NULL,
+        website VARCHAR (200),
+        phonenumber INT (15),
+        streetaddress VARCHAR (200),
+        city VARCHAR (100) NOT NULL,
+        county VARCHAR (50) NOT NULL,
+        productsservices (200) NOT NULL,
+        PRIMARY KEY ('id') ); /* Set ID as primary key */
+        
+	INSERT INTO trailers (ID, storename, website, phonenumber, streetaddress, city, county, productsservices)
+		(601, 'C & F' Trailers and Tack, null, 252.438.5883, 4005 Raleigh Rd, Henderson, Vance, Trailers Supplies Equipment Tack)
+        (602, Double D Trailers, https://www.doubledtrailers.com, null, null, Pink Hill, Lenoir, Trailers, 'Custom Trailers' Equipment)
+        (603, Golden Gait Trailers, https://goldengait.com, null, 5051 Davidson Hwy, Concord, Cabarrus, Trailers 'Custom Trailers' Equipment)
+        (604, Southern Alamance Trailer Co, null, 336.376.6316, 8372 Bethel Church Park Rd, Snow Camp, Alamance, Trailers Sales Service Equipment)
+        (605, Woodlief Trailer Sales, http://www.goretrailers.com, null, 5117 Purnell Rd., Wake Forest, Wake, 'Livestock and Horse Trailers' Equipment)
