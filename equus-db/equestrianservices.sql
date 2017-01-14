@@ -42,7 +42,7 @@ CREATE TABLE tackApparel(
         (203, M & M Tack Shop, 919.851-0102, questions@mmtackshop.com, http://www.mmtackshop.com, 2721A Dover Farm Rd, Raleigh, English-tack apparel footwear)
         (204, Rocking B Saddle Shop, 919.732.7453, , http://www.facebook.com/pages/Rocking-B-Saddle-Shop/152433544798285, 1400 Ben Johnston Rd, Hillsborough, English-tack Western-tack)
 
-CREATE TABLE feedSuppliesTrailers(
+CREATE TABLE feedSupplies(
 		id INT NOT NULL,
         shopName VARCHAR(100) NOT NULL,
         phoneNumber INT(15) NOT NULL,
@@ -59,9 +59,7 @@ CREATE TABLE feedSuppliesTrailers(
         (302, Gro-Smart, 919.245.7848, gro_smart@yahoo.com, http://www.grosmart.com, 250 S Churton St, Hillsborough, Feed Hay Supplies)
         (303, Piedmont Feed & Garden Supply, 919.942.7848, http://www.piedmontfeed.com/visit, http://www.piedmontfeed.com, 4805 NC Hwy 54 West, Chapel Hill, Feed Hay Bedding Supplies)
         (304, Tractor Supply, 919.245.0522, , http://www.tractorsupply.com, 1701 NC Hwy 86 S, Hillsborough, Feed Supplies Farming-Equipment)
-        (305, C & F Trailers & Tack, 252.438.5883, , , 4005 Raleigh Rd, Henderson, Trailers Supplies Tack)
-        (306, Double D Trailers, 888.244.2029, http://www.doubledtrailers.com/contact-us, http://www.doubledtrailers.com, , Pink Hill, Horse-Trailers Stock-Trailers Custom-Orders)
-        (307, Southern Alamance Trailer Co, 336.376.6316,  ,  , 8372 Bethel Church Park Rd, Snow Camp, Trailers Sales Service)
+        (305, Southern States, null, https://www.southernstates.com, 300 N Greensboro St, Carrboro, Orange, 'Horse and Farm Supplies' Feed)
 
 CREATE TABLE veterinarians(
 		id INT NOT NULL,
