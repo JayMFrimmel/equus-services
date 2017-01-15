@@ -9,8 +9,9 @@ html {
 	float: left;
 	color: black;
 	text-align: center;
-
+	padding-top: 20px;
 }
+
 nav {
 	background-color: #ffcc00;
 	text-align: right;
