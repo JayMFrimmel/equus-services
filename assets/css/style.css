@@ -81,7 +81,7 @@ footer {
 /* contact form styling */
 #contact-form {
 	float: left;
-	width: 70%;
+	/* width: 70%;*/
 }
 #contact-form ul {
 	margin-bottom: 20px;
