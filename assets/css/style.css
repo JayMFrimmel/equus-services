@@ -119,10 +119,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=message]:focus {
     background-color: lightblue;
 } 
 .ponyexpress {
-	margin-right: 10px;
+	margin-right: 0px;
 	float: right;
 	/* width: 18%; */
-	padding-right: 10px;
+	padding-right: 0px;
 }
 .clearfix {
 	clear: both;
